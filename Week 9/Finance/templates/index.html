@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+
+
+    <table>
+        <tr>
+            <th>Symbol</th>
+            <th>Shares</th>
+            <th>Price</th>
+            <th>Total</th>
+        </tr>
+
+            {% for row in dict %}
+        <tr>
+            <td>{{ row["symbol"] }}</td>
+            <td>{{ row["shares"] }}</td>
+            <td>{{ row["price"] | usd }}</td>
+            <td>{{ row["total"] | usd }}</td>
+        </tr>
+            {% endfor %}
+        <tr>
+            <td><th>Cash: {{ cash | usd }}</th></td>
+            <td><th>Grand Total: {{ grand | usd }}</th></td>
+        </tr>
+
+    </table>
+{% endblock %}
