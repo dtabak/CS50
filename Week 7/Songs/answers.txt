@@ -1,0 +1,4 @@
+1. I'd look at the average danceability, energy and valence of the top 100 songs.
+2. I'd look at the weighted average of the top 100 songs. We should take top listened songs as well as
+how many times they were listened by the user. Let's assume that if the top 5 songs accounts for the 90%
+of the listen counts, then ntaking the average of 100 songs will be misleading.
